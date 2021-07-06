@@ -12,7 +12,7 @@ window.onload = () =>{
         const location = search.value
         p2.textContent = "Loading data..."
 
-        fetch('http://localhost:3000/weather?address='+location).then((res)=>{
+        fetch('/weather?address='+location).then((res)=>{
             res.json().then((data)=>{
                 p2.textContent = "" 
                 if(data.error) return m1.innerText = data.error;
